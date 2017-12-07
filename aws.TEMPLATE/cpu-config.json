@@ -1,0 +1,10 @@
+{
+    "instance_type"       : "TEMPLATE",
+    "ami"                 : "ami-TEMPLATE",
+    "zone"                : "us-east-1b", 
+    "launch_region"       : "us-east-1",
+    "local_storage_size"  : "0",
+    "instance_count"      : "0",
+    "spot_price"          : "0.0",
+    "extra_volume_size"   : "0"
+}

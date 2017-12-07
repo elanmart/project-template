@@ -1,0 +1,80 @@
+{
+  "builders": [
+    {
+      "source_ami": "ami-da05a4a0",
+      "region": "{{ user `def_region` }}",
+      "ami_name": "{{user `username` }}-cpu {{timestamp}}",
+      
+      "type": "amazon-ebs",
+      "instance_type": "c3.4xlarge",
+
+      "ssh_username": "ubuntu",
+      "ebs_optimized": true,
+
+      "launch_block_device_mappings": [
+        {
+          "device_name": "/dev/sda1",
+          "volume_size": 50,
+          "volume_type": "gp2",
+          "delete_on_termination": true,
+          "iops": 1000
+        }
+      ],
+      
+      "tags": {
+        "Image": "{{user `username` }}-cpu"
+      }
+    }
+  ],
+
+  "provisioners": [
+
+    {
+      "type": "shell",
+      "inline": [
+        "mkdir -p /home/ubuntu/local-setup", 
+        "mkdir -p /home/ubuntu/.aws",
+        "mkdir -p /home/ubuntu/.tmux"]
+    },
+
+    {
+      "type": "file",
+      "source": "conf/aws-config",
+      "destination": "/home/ubuntu/.aws/config"
+    },
+
+    {
+      "type": "file",
+      "source": "conf/tmux.conf",
+      "destination": "/home/ubuntu/.tmux.conf"
+    },
+
+    {
+      "type": "file",
+      "source": "py/requirements.txt",
+      "destination": "/home/ubuntu/local-setup/requirements.txt"
+    },
+    
+    {
+      "type": "file",
+      "source": "py/conda-list.txt",
+      "destination": "/home/ubuntu/local-setup/conda-list.txt"
+    },
+
+    {
+      "type": "file",
+      "source": "conf/environment",
+      "destination": "/home/ubuntu/local-setup/environment"
+    },
+
+    {
+      "type": "shell",
+      "script": "bin/install-apt-packages.sh"
+    },
+
+    {
+      "type": "shell",
+      "script": "bin/install-python.sh"
+    }
+  ]
+}

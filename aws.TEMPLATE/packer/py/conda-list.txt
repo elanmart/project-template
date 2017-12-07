@@ -1,0 +1,14 @@
+setuptools
+mkl
+
+seaborn
+matplotlib
+
+scipy
+numpy
+pandas
+
+nltk
+spacy
+
+scikit-learn

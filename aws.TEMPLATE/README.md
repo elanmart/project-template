@@ -1,0 +1,1 @@
+# This is a short AWS HOW-TO for your personal projects

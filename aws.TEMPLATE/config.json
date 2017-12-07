@@ -1,0 +1,13 @@
+{   
+    "remote_user"   : "TEMPLATE",
+    "username"      : "TEMPLATE",
+    "profile"       : "TEMPLATE",
+       
+    "bucket"        : "TEMPLATE",
+
+    "key_name"      : "TEMPLATE",
+    "key_path"      : "TEMPLATE",
+
+    "user_cidr_block"     : "TEMPLATE",
+    "s3_access_role_name" : "TEMPLATE"
+}
