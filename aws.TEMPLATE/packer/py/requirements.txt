@@ -1,2 +1,17 @@
+# dispatch
+rpyc
+dill
+paramiko
+plumbum
+persist-queue
+
+# tracker
+tinydb
+gitpython
+
+# aws
 awscli
 boto3
+
+# misc
+wrapt
