@@ -27,7 +27,7 @@ variable "extra_volume_dir" {
 }
 
 variable "tmp_project_dir" {
-  default = "./.tmp-terraform-rsync-dir"
+  default = "/tmp/.tmp-terraform-rsync-dir"
 }
 
 
