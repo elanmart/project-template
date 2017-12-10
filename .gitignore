@@ -2,18 +2,12 @@
 # PROJECT
 ########## # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-data/**
-!data/.empty
+storage/**
+!storage/.empty
 
-manager/**
-!manager/.empty
-
-aws/**
-!aws/.empty
-
-config/secret/**
-!config/secret/.empty
-
+aws*/config.json
+.terraform
+terraform.tfstate*
 
 ########## # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # IDEs
@@ -21,6 +15,7 @@ config/secret/**
 
 .vscode/
 .idea/
+notebooks/untracked*
 
 
 ########## # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #

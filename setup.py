@@ -17,7 +17,7 @@ setup(
     author_email='marcin.elantkowski@gmail.com',
     license='MIT',
     keywords='',
-    packages=find_packages(exclude=['contrib', 'docs', 'tests']),
+    packages=find_packages(exclude=['aws', 'notebooks', 'storage', 'scripts', 'test', 'writeup']),
     install_requires=[],
     package_data={},
     entry_points={

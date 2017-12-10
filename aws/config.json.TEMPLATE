@@ -8,6 +8,6 @@
     "key_name"      : "TEMPLATE",
     "key_path"      : "TEMPLATE",
 
-    "user_cidr_block"     : "TEMPLATE",
+    "user_cidr_block"     : "000.000.000.000/32",
     "s3_access_role_name" : "TEMPLATE"
 }
